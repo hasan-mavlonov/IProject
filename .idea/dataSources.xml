@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="ipusers@dpg-cvfirqgfnakc739pa8qg-a.oregon-postgres.render.com" uuid="50417bd7-efa1-4d5b-b764-f1acdb828248">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://dpg-cvfirqgfnakc739pa8qg-a.oregon-postgres.render.com:5432/ipusers</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
     <data-source source="LOCAL" name="db" uuid="49809145-d89f-47d7-9760-2f48d6880bca">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
@@ -15,13 +22,6 @@
           <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.45.1/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar</url>
         </library>
       </libraries>
-    </data-source>
-    <data-source source="LOCAL" name="postgres@dpg-cvfirqgfnakc739pa8qg-a.oregon-postgres.render.com" uuid="50417bd7-efa1-4d5b-b764-f1acdb828248">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://dpg-cvfirqgfnakc739pa8qg-a.oregon-postgres.render.com:5432/postgres</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
 </project>

@@ -75,15 +75,20 @@ WSGI_APPLICATION = 'IProject.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 
-
 DATABASES = {
-    'default': dj_database_url.config(default=f'sqlite:///{BASE_DIR}/db.sqlite3')
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv("POSTGRES_DB", "ipusers"),
+        'USER': os.getenv("POSTGRES_USER", "hasanmavlonov"),
+        'PASSWORD': os.getenv("POSTGRES_PASSWORD", "your_db_password"),
+        'HOST': os.getenv("POSTGRES_HOST", "dpg-cvfirqgfnakc739pa8qg-a.oregon-postgres.render.com"),
+        'PORT': os.getenv("POSTGRES_PORT", "5432"),
+    }
 }
 
 
 
-# Password validation
-# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -99,9 +104,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-# Internationalization
-# https://docs.djangoproject.com/en/5.1/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
