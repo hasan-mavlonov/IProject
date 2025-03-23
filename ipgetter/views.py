@@ -2,6 +2,7 @@ import requests
 from django.http import JsonResponse
 from .models import User
 
+
 def get_ip(request):
     """Retrieve user IP and fetch geolocation details."""
     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
@@ -27,4 +28,3 @@ def get_ip(request):
         "city": data.get("city", "Unknown"),
         "isp": data.get("isp", "Unknown"),
     })
-
